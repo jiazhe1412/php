@@ -1,0 +1,83 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 6, 2023, 12:20:15 AM
+    Author     : user
+*/
+
+body{
+   
+    background-color: #F8EDE3;
+
+}
+.recentNotification{
+    border: 10px outset;
+    border-color: #ffb382;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 350px;
+    margin-bottom: 2%;
+    background-color: #ffe7c0;
+    margin-top: 5%;
+}
+
+h1{
+    margin-left: 10%;
+}
+.txtNotification{
+    text-align: center;
+
+}
+.txtNotice{
+    margin-top: 35%;
+    width:80%;
+    padding-top:1.79%;
+    padding-bottom: 1.79%;
+        position:relative;
+
+}
+
+.buttonSend{
+    padding-bottom: 1.79%;
+    padding-top: 1.79%;
+    padding-left: 1.59%;
+    padding-right: 1.59%;
+
+}
+
+.top{
+    position:relative;
+    display: inline-block;
+       
+}
+
+.dropdown2{
+    margin-top: 0%;
+    margin-left: 0%;
+    display:none;
+    position: absolute;
+    min-width: 50%;
+    min-height: 100%;
+    border:4px inset #f8ede3;
+    box-shadow: #798777 9px 9px 9px 9px;
+    font-size: 122%;
+    padding:2%;
+    
+}
+
+.dropdown2 > a{
+    text-decoration:none;
+    
+}
+
+.top:hover .dropdown2,.top{
+    display:block;
+    background: linear-gradient(to right, #ffcc99 0%, #ffffff 100%);
+}
+
+.notice{
+    margin-left: 20%;
+}

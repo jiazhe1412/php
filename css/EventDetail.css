@@ -1,0 +1,119 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 4 Apr 2023, 9:49:54 pm
+    Author     : Lee
+*/
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color:#F8EDE3;
+}
+
+.eventPhoto{
+    width:200px;
+    background-size: 20%;
+    float:left
+}
+
+.order-content{
+    border:1px solid black;
+    background-color: white;
+    margin: 2% auto;
+    width:70%;
+}
+
+.info{
+    font-size:70%;
+    color: black;
+    font-weight: bold;
+    font-family: 'Texta Alt',sans-serif;
+    padding-left: 3%;
+    padding-right: 13%;
+    text-align: justify;
+    float:right;
+    margin-top:3%;
+}
+
+.order-content tr th h1{
+    font-family: 'Texta Alt',sans-serif;
+    font-size: 1.8rem;
+    padding-left: 30px;
+    margin:12px;
+    text-align: left;
+}
+
+.order-content tr th h3{
+    text-align: left;
+}
+
+.order-content tr th h3 a{
+    text-decoration:none;
+    color: lightblue;
+}
+
+.order-content h3 a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.highlight{
+    color: blue;
+    font-weight: bold;
+    font-size:15px;
+    padding-left: 0;
+}
+
+.submit {
+    text-align: right;
+    font-size:18px;
+    font-family: 'Texta Alt',sans-serif;
+    font-family: system-ui;
+    margin-right:10%
+}
+
+.notFound{
+    border:1px solid black;
+    background-color: white;
+    margin: 2% auto;
+    width:50%;
+    padding:0 0 3% 0;
+    text-align: center;
+    font-family: cursive;
+}
+
+.notFound a{
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+}
+
+.notFound a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.submit input{
+    padding: 1%;
+    font-size: 16px;
+    border-radius: 7px;
+    background-color: #00ffa1;
+    font-weight:bold;
+    text-align:center;
+    margin: 1%;
+    
+}
+
+.submit input:hover{
+    background-color: #05fc00;
+}
+
+
+
+
+

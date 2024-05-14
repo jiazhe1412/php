@@ -1,0 +1,82 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 8, 2023, 11:11:22 AM
+    Author     : User
+*/
+
+#heading{
+    background-color:#c2e195;
+    width:20%;
+    text-align:center;
+    margin: 5% 0% 2% 0%;
+}
+
+
+
+#list{
+    margin:0% 0% 2% 3%;
+    width:55%;
+    border-collapse:collapse;
+}
+
+.list1 > .date{
+    width:13%;
+}
+
+.list1 > td{
+    border:1px solid grey;
+    text-align:center;
+    padding:1%;
+}
+
+.list1 > th{
+    border:1px solid grey;
+    width:8%;
+    padding:1%;
+}
+
+.record{
+    position:relative;
+}
+
+#detail{
+    position:absolute;
+    top:22%;
+    left:60%;
+    width:45%;
+
+}
+
+#result{
+    width:80%;
+
+    border:1px solid black;
+}
+
+#r1 > tr > th{
+    width:12%;
+    text-align:left;
+}
+
+#r1 > tr > td{
+    width:28%;
+
+}
+
+#r1 > tr > td > input{
+    background:transparent;
+    background-color: pink;
+}
+
+#r2 > tr > th{
+    width:12%;
+    text-align:left;
+}
+
+#r2 > tr > td{
+    width:28%;
+
+}

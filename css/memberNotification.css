@@ -1,0 +1,63 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 8, 2023, 11:02:17 PM
+    Author     : user
+*/
+body{
+    background-color: #F8EDE3;
+}
+.profile{
+    margin:4% 0% 3% 0.2%;
+}
+.img{
+    height: 100%;
+    width:100%;
+    border-radius:50%;
+}
+.profilePic{
+    border-radius: 50%;
+    width:150px;
+    height:150px;
+    background-color: grey;
+    border:2px solid black;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+.tablePic{
+    border: 2px solid black;
+    width:10%;
+    height:auto;
+    padding-left: 6%;
+    margin-left: 2%;
+    margin-bottom: 10%;
+    background-color: #f9edd2;
+
+}
+
+.txt{
+    text-align: center;
+}
+.txt1{
+   
+   color:grey;
+   font-size:220%;
+   
+}
+
+
+.showNotice{
+    margin-left: 25%;
+    border:2px solid black;
+    width:70%;
+    height:200%;
+    padding-bottom: 29%;
+    margin-bottom: 2%;
+    margin-top: -34.5%;
+    overflow: hidden;
+    background-color: #f9edd2;
+    overflow: hidden;
+}

@@ -1,0 +1,197 @@
+html{
+    background-color: #F8EDE3;
+}
+
+body{
+
+    margin:0;
+    padding:0;
+}
+
+.header{
+    background-color: #A2B29F;
+    border-block: 8px solid black;
+    height:170px;
+    
+}
+
+.pic{
+    margin: 15px 0 0 0;
+}
+
+
+.logo{
+    font-size: 135px;
+    font-family: fantasy;
+    animation-name: fly;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    position: relative;
+    left:-1450px;
+    text-align: center;
+    
+}
+
+@keyframes fly{
+    from{
+        left:-1450px;
+    }
+    to{
+        
+        left:0px;
+    }
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+    text-shadow:black 4px 6px;
+    font-size:90%;
+}
+
+.nav{
+    background-color: #798777;
+    border-bottom:8px solid black;
+    padding:10px 0;
+}
+
+.bar, .bar1{
+    font-size: 180%;
+    margin:-10px auto;
+    height:50px;
+}
+
+.bar{
+    margin-left: 2%;
+
+}
+
+.bar1{
+    margin-right: 0%;
+}
+
+.bar li{
+    float:right;
+    display:block;
+    font-family: monospace;
+    padding:0 2%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.bar1 li{
+    float:left;
+    display:block;
+    font-family: monospace;
+    padding:0 2%;
+    margin: 0 auto;
+    margin-top: 20px;
+
+}
+
+.bar li a, .bar1 li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-shadow:black 2px 2px;
+}
+
+.bar li a:hover, .bar1 li a:hover{
+    color: rgb(153, 255, 222);
+    font-weight: bold;
+}
+
+.searchbar{
+    margin:2% 0% 2% 2%;
+    display:block;
+}
+
+.searchbar > form > input{
+    
+    box-sizing: border-box;
+    border:2px solid whitesmoke;
+    color:black;
+    vertical-align: center;
+}
+
+.searchbar > form > input:hover{
+    background-color: blanchedalmond;
+}
+
+.category{
+    width:15%;
+    height:10%;
+    box-sizing: border-box;
+    padding:11px 20px 11px 2px;
+    margin-left: 2%;
+    border:2px solid #A2B29F;
+    border-radius:6%;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    
+   
+    .logo{
+    font-size: 430%;
+    font-family: fantasy;
+    animation-name: fly;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    position: relative;
+    left:-1450px;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.logo > img{
+    width:8%;
+   
+}
+
+.header{
+    height:50%;
+}
+
+.bar, .bar1{
+    font-size: 120%;
+    margin:-14px auto;
+    height:50px;
+}
+.searchbar > form > input{
+    font-size:75%;
+}
+
+.category{
+    width:15%;
+    height:10%;
+    box-sizing: border-box;
+    padding:11px 20px 11px -2px;
+    margin-left: 2%;
+    border:2px solid #A2B29F;
+    border-radius:6%;
+    font-size:60%;
+}
+
+.bar1 li{
+    float:left;
+    display:block;
+    font-family: monospace;
+    padding:0 2%;
+    margin: 0 auto;
+    margin-top: 20px;
+
+}
+
+.bar1{
+    padding-left:0%;
+}
+
+}
+
+
+
+
+
+
+
+

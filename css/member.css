@@ -1,0 +1,133 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 7, 2023, 12:01:14 AM
+    Author     : user
+*/
+body{
+    
+    background-color: #F8EDE3;
+
+}
+.img{
+    height: 100%;
+    width:100%;
+    border-radius:50%;
+    
+}
+.circle{
+    height: 300px;
+    width: 300px;
+    border-radius:50%;
+    background-color:grey;
+    margin-left: 55%;
+    margin-right:auto;
+    margin-top: -2%;
+    border:2px solid black;
+    position: relative;
+    
+}
+
+
+
+.shapearea{
+    margin-top: -20%;
+}
+.shape,.shape2,.shape3,.shape4{   
+    border:2px solid black;
+    text-align: left;
+    width: 30%;
+    height: 5%;
+    background-color: #C5DACC;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom: 1.8%;
+  text-align: center;
+}
+.shape{
+    margin-left:26%;
+}
+.shape2{
+    margin-left: 25%;
+}
+.shape3{
+    margin-left: 25.6%;
+}
+.shape4{
+    margin-left: 28.2%;
+}
+
+  .option{
+  border: 2px solid black;
+  background-color: #F4CFAF;
+  width: 1.8%;
+  
+  margin-left: 8px;
+  margin-top: 1%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  position: relative;
+  display: inline-block;
+}
+
+.option1 {
+  margin-top:-40%;
+  margin-left: -90%;
+  display: none;
+  position: absolute;
+  border: 4px inset #f8ede3;
+  box-shadow: #798777 2px 2px 2px 2px;
+  background-color: #C5DACC;
+  padding: 200%;
+  padding-bottom: 93%;
+  padding-top: 0%;
+  top: 0;
+  font-size: 136%;
+  text-align: center;
+}
+
+.option > a{
+  text-decoration: none;
+}
+
+.option:hover .option1,
+.option1:hover {
+  display: block;
+}
+
+
+h1{
+    color: black;
+}
+
+.linglong{
+    padding-left: 95%;
+    margin-top: -5%;
+    font: 20px black calibri;
+}
+
+.edit1{
+    position:absolute;
+    border: 2px outset grey;
+margin-left: 65%;
+margin-top: 60%;
+width:auto;
+    height:10%;
+background-color: lightgray;
+display:none;
+}
+
+.circle:hover .edit1{
+    display:block;
+}
+
+.textMember{
+    margin:1% auto 5% auto;
+    width:90%;
+    
+}
+

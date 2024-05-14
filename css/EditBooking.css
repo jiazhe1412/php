@@ -1,0 +1,71 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 5 May 2023, 9:36:32 pm
+    Author     : Lee
+*/
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color:#F8EDE3;
+}
+
+.editbooking{
+    border:1px solid black;
+    background-color: white;
+    margin: 2% auto;
+    width:70%;
+    padding:5%;
+    font-family: monospace;
+    text-align: center;
+    font-size: 20px;
+    border-radius:20px;
+    box-shadow: 2px 2px 10px #7cffcb;
+}
+
+table, td, th, tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 1%;
+}
+
+.error{
+    border: 2px solid black;
+    background-color: white;
+    color:black;
+    width:30%;
+    margin:2% auto;
+    list-style-position: inside;
+    padding:2%;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.editbtn input{
+    padding: 1%;
+    font-size: 16px;
+    border-radius: 7px;
+    background-color: #00ffa1;
+    font-weight:bold;
+    text-align:center;
+    margin: 1%;
+}
+
+.editbtn input:hover{
+    background-color: #05fc00;
+}
+
+.sucessful{
+    margin:1% auto;
+    background-color: lightgreen;
+    padding:2%;
+    width:30%;
+    border: 1px solid black;
+    font-family: cursive;
+}

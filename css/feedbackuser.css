@@ -1,0 +1,125 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 6 Apr 2023, 7:51:31 pm
+    Author     : Lee
+*/
+
+*{
+    padding: 0;
+    margin:0;
+}
+
+body{
+    background-color:#20bf55;
+    background-image:linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+
+}
+
+section{
+    margin:5% auto;
+    border:1px solid black;
+    width: 80%;
+    background-color:#7cffcb;
+    background-image:linear-gradient(315deg, #7cffcb 0%, #74f2ce 74%);
+    padding: 2% 4%;
+    border-radius: 20px;
+    box-shadow:  2px 2px 900px rgb(122, 255, 234);
+}
+
+.center{
+    text-align: center;
+    font-family: 'Century Gothic';
+    color: white;
+    padding-bottom:5%;
+}
+
+.center h1{
+    font-size: 36px;
+}
+
+.center p{
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.content{
+    font-size: 21px;
+    font-family: cursive;
+
+}
+
+.row{
+    margin: 2% 0;
+
+}
+
+.row input{
+    font-size: 18px;
+    padding: 5px 20px;
+    border-radius: 30px;
+    margin-right: 1%;
+    width: 300px;
+}
+.row label{
+    margin-right: 1%;
+}
+
+.button input{
+    background-color: #289474;
+    padding: 10px;
+    border: 1px solid rgb(148, 209, 170);
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 2px 2px 0px #3ce0af;
+    margin:0 1%;
+    width: 30%;
+    font-weight: bold;
+}
+
+.button input:active{
+    box-shadow: 0 0 0;
+
+}
+
+#bigInput{
+    width:80%;
+    height: 100px;
+}
+
+@media only screen and (max-width:600px){
+    .row input{
+        font-size: 18px;
+        padding: 1% 2px;
+        border-radius: 30px;
+        margin-right: 1%;
+        width:20%;
+    }
+}
+
+.slcEvent{
+    font-size:30px;
+    font-family: cursive;
+}
+
+.error{
+    background-color: pink;
+
+}
+
+.center .error ul li{
+    color:red;
+}
+
+.center .info{
+    color:black;
+}
+
+.fix{
+    background-color: #cccccc; 
+    
+}
+

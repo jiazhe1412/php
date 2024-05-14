@@ -1,0 +1,118 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 6, 2023, 6:21:57 PM
+    Author     : User
+*/
+html{
+    background-color: #F8EDE3;
+}
+*{
+
+    margin:0;
+    padding:0;
+}
+
+.sidebar{
+    height:100%;
+    width:20%;
+    background-color: #BDD286;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    overflow-x: hidden;
+    padding-top: 2%;
+    
+   
+}
+
+.sidebar > a{
+    color:grey;
+    padding: 6% 4% 3% 8%;
+    text-decoration: none;
+    font-size: 125%;
+    display: block;
+}
+
+.sidebar > a:hover{
+    color:whitesmoke;
+}
+
+.sidebar > div{
+    display: none;
+    padding:3%;
+}
+
+
+.sidebar > div > a{
+    color:grey;
+    padding: 6% 4% 3% 8%;
+    text-decoration: none;
+    font-size: 125%;
+
+}
+
+.sidebar > div > a:hover{
+    color:whitesmoke;
+}
+
+.sidebar > div{
+    background-color:#a4d286;
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        padding-top: 15px;
+        width:30%;
+    }
+    .sidebar a {
+        font-size: 90%;
+    }
+}
+
+/*top div*/
+.top{
+    padding-left: 20%;
+    height:7%;
+    width:20%;
+    top:0;
+    background-color:#BDD286;
+    margin-top: 3%;
+}
+
+.top > h2{
+    padding: 6px 8px 6px 16px;
+    top:0;
+}
+
+.error{
+    background-color:pink;
+    border:1px solid black;
+    width:50%;
+    padding:1% 1% 1% 4%;
+    color:brown;
+}
+
+
+.info{
+    border:2px solid black;
+    background-color:lightblue;
+    color:navy;
+    font-size:large;
+    padding:1% 1% 1% 4%;
+}
+
+#descr{
+    resize:none;
+
+}
+
+button{
+    font-size: 150%;
+}
+
+
+

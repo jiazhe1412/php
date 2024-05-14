@@ -1,0 +1,78 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 15, 2023, 4:07:32 AM
+    Author     : user
+*/
+
+.table{
+    margin: 2% auto;
+    border: 1px solid black;
+    padding:3%;
+    font-size: 20px;
+    border-radius:20px;
+    box-shadow: 2px 2px 10px #7cffcb;
+    background-color: white;
+    font-family: cursive;
+}
+h1,.txt{
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
+}
+.txt{
+    margin-left: 4%;
+
+}
+tr{
+    margin-bottom:2%;
+}
+.submit{
+    margin-left: 50%;
+}
+.txtarea{
+
+    background-color: #ff6666;
+    border:2px solid black;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:auto;
+
+}
+.txterr{
+    color:black;
+}
+
+.title{
+    font-family: fantasy;
+    font-weight: normal;
+}
+.editbtn input{
+    padding: 1%;
+    font-size: 16px;
+    border-radius: 7px;
+    background-color: #00ffa1;
+    font-weight:bold;
+    text-align:center;
+    margin: 1%;
+}
+
+.editbtn input:hover{
+    background-color: #05fc00;
+}
+
+.editbtn button{
+    padding: 1%;
+    font-size: 16px;
+    border-radius: 7px;
+    background-color: #00ffa1;
+    font-weight:bold;
+    text-align:center;
+    margin: 1%;
+}
+
+.editbtn button:hover{
+    background-color: #05fc00;
+}

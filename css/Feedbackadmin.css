@@ -1,0 +1,221 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 6 Apr 2023, 7:54:28 pm
+    Author     : Lee
+*/
+
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-size: cover;
+    background-color: #1dd1a1;
+    background-image: linear-gradient(315deg, #1dd1a1 0%, #d3d3d3 74%);
+    background-repeat: no-repeat;
+
+}
+
+.selectEvent{
+    margin-left:20%;
+}
+
+table tr td img{
+    width:300px;
+    height:180px;
+}
+
+table tr td input{
+    border:none;
+    border-radius:20px;
+    font-size: 20px;
+    padding: 5px;
+    margin: 10px auto;
+    background-color: rgb(240, 240, 240);
+    font-family:monospace;
+    box-shadow: 2px 2px 4px black;
+    text-decoration: none;
+    color: black;
+}
+
+table tr td input:hover{
+    background-color: rgb(85, 255, 134);
+
+}
+
+table tr td input:active{
+    box-shadow: 0px 0px white;
+    background-color:rgb(189, 189, 189);
+}
+
+table{
+
+}
+
+table tr td p{
+    font-size: 30px;
+    font-family: fantasy;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+}
+
+.selectEvent table{
+    border:1px solid rgb(27, 166, 145);
+    background-color: rgb(55, 193, 156);
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+table tr td{
+    border:1px solid rgb(27, 166, 145);
+}
+
+table, td, th{
+    border-collapse: collapse;
+}
+
+.selectEvent h1{
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    border:1px solid black;
+    background-color: rgb(0, 133, 134);
+    font-size: 30px;
+}
+
+/*table tr td img{
+    width:100px;
+}
+
+
+table tr td input{
+    border:none;
+    border-radius:20px;
+    font-size: 12px;
+    padding: 5px;
+    margin: 10px auto;
+    background-color: rgb(240, 240, 240);
+    font-family:monospace;
+    box-shadow: 2px 2px 4px black;
+    text-decoration: none;
+    color: black;
+}
+
+table tr td input:hover{
+    background-color: rgb(85, 255, 134);
+
+}
+
+table tr td input:active{
+    box-shadow: 0px 0px white;
+    background-color:rgb(189, 189, 189);
+}
+
+table{
+    background-color: rgb(37, 181, 146);
+}
+
+table tr td p{
+    font-size: 18px;
+    font-family: fantasy;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+}
+
+table tr td{
+    border:1px solid rgb(27, 166, 145);
+    padding:20%;
+    background-color: rgb(55, 193, 156);
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.selectEvent h1{
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    border:1px solid black;
+    background-color: rgb(0, 133, 134);
+    font-size: 17px;
+}
+
+.selectEvent{
+    border:1px solid black;
+    overflow: scroll auto;
+    height: inherit;
+    margin-top: auto;
+    margin-bottom:auto;
+    margin-left:20%;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.right{
+    width: 50%;
+    margin-top: 3%;
+    margin-bottom: auto;
+    overflow: auto;
+    margin-left: 5%;
+    margin-right: auto;
+    border-radius: 5%;
+    box-shadow: 2px 2px 8px black;
+}
+
+.right *{
+    display: none;
+}
+
+.right h1{
+    background-color: rgb(51, 219, 168);
+    text-align: center;
+    font-family: fantasy;
+    color:white;
+    font-size: 40px;
+    font-weight: normal;
+    text-shadow: 2px 2px black;
+}
+
+.content{
+    padding: 1% 5%;
+    background-color: rgb(65, 238, 172);
+    color:white;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.content button{
+    float: right;
+    padding:3px 2%;
+    background-color: rgb(255, 115, 115);
+    color: white;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px red;
+}
+
+.content button:active{
+    box-shadow: 0 0 0 transparent;
+}*/

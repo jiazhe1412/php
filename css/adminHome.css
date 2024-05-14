@@ -1,0 +1,151 @@
+table.position {
+  width: 10%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table.position td {
+  border: 1px solid black;
+  padding: 5px;
+}
+.table1{
+  margin-left: 20%;
+  
+}
+.table{
+    margin-left: 20%;
+    border:1px black solid;
+    padding:5px;
+    background-color: white;
+    width: 80%;   
+    margin-top: 1%;
+
+}
+.border1 {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  width: 78%;
+    box-shadow: 2px 2px 10px #7cffcb;
+}
+.submitbtn{
+    padding: 1.2% 1.2% 1.2% 1.2%;
+    background-color: #3399ff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.dltbtn1{
+    margin-left:20.2%;
+    margin-top:0.3%;
+    padding: 1% 1.2% 1% 1.2%;
+    background-color: #ff3333;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.border1 input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.border1{
+    margin-left: 21%;
+    background-color: white;
+}
+
+
+.rectangle {
+  width: 80%;
+  background-color: #4CAF50;
+  margin-top: 20px;
+  padding: 10px;
+  margin-left: 20%;
+  margin-right: 50%;
+}
+
+.showmem {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+}
+.dltbtn{
+   margin-left: 28%;
+   margin-top: -5%;
+   padding-bottom: 3%;
+}
+body{
+   
+    background-color: #F8EDE3;
+
+}
+.txtN{
+    font-size: 110%;
+    margin-left: 0%;
+    border-right: 2px solid #ffb382;
+    width:17%;
+    border-bottom:2px solid #ffb382;
+    background-color: #ffb382;
+    box-shadow: 2px 2px 10px #ffb382;
+}
+.recentNotification{
+    border: 4px solid;
+    border-color: #ffb382;
+    box-shadow: 2px 2px 10px #ffb382;
+    margin-left: 1%;
+    margin-right: 80%;
+    width: 99%;
+    height: 350px;
+    margin-bottom: 2%;
+    background-color: #ffe7c0;
+    margin-top: 3%;
+    overflow: auto;
+}
+.h1txt{
+    margin-left:50%;
+}
+.table78{
+    border:2px solid orangered;
+    box-shadow: 2px 2px 10px orangered;
+    margin-left:48%;
+    margin-top: 6%;
+    margin-right: 20%;
+    
+}
+h1{
+    margin-left: 10%;
+}
+.txtNotification{
+margin-left: -0%;
+text-align: center;
+}
+
+.txtNotice{
+    margin-top: 1%;
+    width:70%;
+    padding-top:1.79%;
+    padding-bottom: 1.79%;
+position:relative;
+text-align: center;
+margin-left:8%;
+}
+
+.buttonSend{
+    padding-bottom: 1.79%;
+    padding-top: 1.79%;
+    padding-left: 1.59%;
+    padding-right: 1.59%;
+
+}
+
+
+.notice{
+    margin-left: 20%;
+}
+.btn-danger{
+margin-left:20%;
+}
