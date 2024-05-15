@@ -6,7 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Edit Event</title>
+        <title>Edit Product</title>
         <link href="css/edit-delete.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
@@ -14,7 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         include './admin_header.php';
         require_once './config/database_connection.php';
         ?>
-        <div class='top'><h2>Edit Event</h2></div>
+        <div class='top'><h2>Edit Product</h2></div>
         <div id="detail">
             <form method="POST" enctype="multipart/form-data">
                 <table>
@@ -176,7 +176,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                             <td><input type="date" name="startDate" value="<?php echo (isset($startDate) ? $startDate : "") ?>" /> > <input type='date' name='endDay' value="<?php echo (isset($endDate) ? $endDate : '') ?>" ></td>
                         </tr>
                         <tr>
-                            <th>Event Name</th>
+                            <th>Product Name</th>
                             <td style="width:10%;">:</td>
                             <td><input type="text" name="eventName" value="<?php echo (isset($eventName) ? $eventName : "") ?>" /></td>
 
@@ -215,7 +215,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                             <td><input style="width:15%;" type="number" name="price" placeholder="0.00" value="<?php echo (isset($price) ? $price : "") ?>" min="0" max="999" step=".01" /></td>
                         </tr>
                         <tr>
-                            <th>number of ticket sold</th>
+                            <th>stock quantity</th>
                             <td style="width:10%;">:</td>
                             <td><input style="width:15%;" type="number" name="ticketNum" placeholder="0" value="<?php echo (isset($ticketNum) ? $ticketNum : "") ?>" min="0" max="9999" /></td>
                         </tr>

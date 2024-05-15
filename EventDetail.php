@@ -6,7 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Event Booking Order Page</title>
+        <title>Product Order Page</title>
         <link href="css/EventDetail.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -46,7 +46,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                             <form action='action' method='POST'>
                     <table class='order-content'>
                 <tr>
-                    <th colspan='2'><h3><a href='user_event.php'>️◀️ Back to Event Page</a></h3></th>
+                    <th colspan='2'><h3><a href='user_event.php'>️◀️ Back to Product Page</a></h3></th>
                 </tr> 
                             
                             <tr>

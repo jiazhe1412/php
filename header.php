@@ -68,7 +68,7 @@ if (isset($_SESSION['memberID']) != NULL) {
             <ul class="bar1">             
 
                 <li class="n2"><a href="user_event.php">HOME</a></li>
-                <li class="n2"><a href="user_event.php#A">EVENT</a></li>
+                <li class="n2"><a href="user_event.php#A">PRODUCT</a></li>
                 <li class="n2"><a href="<?php echo (isset($record) ? $record : "") ?>">RECORD</a></li>
                 <li class="n2"><a href="<?php echo (isset($feedback) ? $feedback : "") ?>" >FEEDBACK</a></li>
 

@@ -22,11 +22,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         <div class='sidebar'>
             <h2>Admin</h2>
             <a href='adminHome.php' >Home</a><hr />
-            <a id="down" ">Event</a><hr />
+            <a id="down" ">Product</a><hr />
             <div id="content">
-                <a href='event_calender.php' >Event Calender</a><br />
-                <a href='admin-event-detail.php' >Event Detail</a><br />        
-                <a href='list-event.php' >Event List</a><br />
+                <a href='event_calender.php' >Product Calender</a><br />
+                <a href='admin-event-detail.php' >Product Detail</a><br />        
+                <a href='list-event.php' >Product List</a><br />
             </div>
             <a href='admin_booking.php' >Booking Record</a><hr />
             <a href='Feedbackadmin.php' >Feedback Record</a><hr />

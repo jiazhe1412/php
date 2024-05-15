@@ -16,7 +16,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         require_once './config/database_connection.php';
         ?>
 
-        <div class='top'><h2>Event Detail</h2></div>
+        <div class='top'><h2>Product Detail</h2></div>
         <div id="all">
 
             <div id="heading">
@@ -27,7 +27,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
 
                     <tr>
-                        <th>Event Name:</th>
+                        <th>Product Name:</th>
                         <td>
                             <form method="POST">
                                 <select name="eventName">
@@ -169,7 +169,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                         <td colspan="3">
                             <?php
                             if ($check == 0) {
-                                echo "<div class='error'>No event found.</div>";
+                                echo "<div class='error'>No product found.</div>";
                             }
                             ?>
                         </td>
@@ -186,14 +186,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                     <td><input type="date" name="startDate" value="<?php echo (isset($startDate) ? $startDate : "") ?>" readonly/> > <input type='date' name='endDay' value="<?php echo (isset($endDate) ? $endDate : '') ?>" readonly></td>
                 </tr>
                 <tr>
-                    <th>Event Name</th>
+                    <th>Product Name</th>
                     <td style="width:10%;">:</td>
                     <td><input type="text" name="eventName" value="<?php echo (isset($eventName) ? $eventName : "") ?>" readonly/></td>
 
                 </tr>
 
                 <tr rowspan="2">
-                    <th style="vertical-align: top;">Event Picture</th>
+                    <th style="vertical-align: top;">Product Picture</th>
                     <td style="width:10%;vertical-align: top;">:</td>
                     <td><img src="image/<?php echo (isset($photoName) ? $photoName : "") ?>" width="40%" height="50%" /></td>
                 <input type="hidden" name="eventPhoto" value="<?php echo (isset($photoName) ? $photoName : "") ?>" readonly/>
@@ -218,7 +218,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                     <td><input style="width:15%;" type="number" name="price" placeholder="0.00" value="<?php echo (isset($price) ? $price : "") ?>" min="0" max="999" step=".01" readonly/></td>
                 </tr>
                 <tr>
-                    <th>number of ticket sold</th>
+                    <th>number of product quantity</th>
                     <td style="width:10%;">:</td>
                     <td><input style="width:15%;" type="number" name="ticketNum" placeholder="0" value="<?php echo (isset($ticketNum) ? $ticketNum : "") ?>" min="0" max="9999" readonly/></td>
                 </tr>

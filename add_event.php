@@ -6,11 +6,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Event Adding Form</title>
+        <title>Product Adding Form</title>
         <link href="css/add_event.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div class='top'><h2>Add New Event</h2></div>
+        <div class='top'><h2>Add New Product</h2></div>
 
 
         <?php
@@ -161,14 +161,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
 
                 <tr>
-                    <th>Event Name</th>
+                    <th>Product Name</th>
                     <td style="width:10%;">:</td>
                     <td><input type="text" name="eventName" value="<?php echo (isset($eventName) ? $eventName : "") ?>"/></td>
 
                 </tr>
 
                 <tr>
-                    <th>Event Picture</th>
+                    <th>Product Picture</th>
                     <td style="width:10%;">:</td>
                     <td><input type="file" name="eventImg" /></td>
                 <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
@@ -192,7 +192,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                     <td><input style="width:15%;" type="number" name="price" placeholder="0.00" value="<?php echo (isset($price) ? $price : "") ?>" min="0" max="999" step=".01"/></td>
                 </tr>
                 <tr>
-                    <th>number of ticket provided</th>
+                    <th>Stock Quantity</th>
                     <td style="width:10%;">:</td>
                     <td><input style="width:15%;" type="number" name="ticketNum" placeholder="0" value="<?php echo (isset($ticketNum) ? $ticketNum : "") ?>" min="0" max="9999"/></td>
                 </tr>

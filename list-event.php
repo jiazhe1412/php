@@ -6,7 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>List Event</title>
+        <title>List Product</title>
         <link href="css/list-event.css" rel="stylesheet" type="text/css"/>
     </head>
 
@@ -16,14 +16,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         require_once './config/database_connection.php';
 
         $eventHeader = array(
-            "eventID" => "Event ID",
-            "eventName" => "Event Name",
+            "eventID" => "Product ID",
+            "eventName" => "Product Name",
             "startDay" => "Start Date",
             "endDay" => "End Date",
             "startTime" => "Start Time",
             "endTime" => "End Time",
             "price" => "Price(RM)",
-            "ticketNumber" => "Ticket Number"
+            "ticketNumber" => "Stock Quantity"
         );
 
         global $sort, $type;
@@ -38,10 +38,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             $sort = "ASC";
         }
         ?>
-        <div class='top'><h2>Event List</h2></div>
+        <div class='top'><h2>Product List</h2></div>
         <div id="all">
             <div id="heading">
-                <h2 id="record">Event</h2>
+                <h2 id="record">Product</h2>
             </div>
 
             <form action="" method="post">

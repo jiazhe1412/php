@@ -18,7 +18,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         include './header.php';
         require_once './config/database_connection.php';
         ?>
-        <h1 id='A'>All Event</h1>
+        <h1 id='A'>All Product</h1>
 
         <table>
             <?php
