@@ -6,10 +6,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 
-define('DB_HOST', "localhost");
-define('DB_USER', "root");
-define('DB_PASSWORD', "");
-define('DB_NAME', "assignment");
+define('DB_HOST', "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com");
+define('DB_USER', "nbuser");
+define('DB_PASSWORD', "12345678");
+define('DB_NAME', "dbmusic");
 function checkMemberID() {
     $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
