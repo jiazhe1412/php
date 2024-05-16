@@ -189,7 +189,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             $memberID = $_SESSION['memberID'];
             
             
-            if ($result = $record->fetch_object()) {
+            if ($result == $record->fetch_object()) {
                 $count = 0;
                 while ($record = $result->fetch_object()) { //
                     if ($record->eventID == $eventID && $memberID == $record->memberID) {
