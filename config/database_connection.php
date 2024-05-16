@@ -5,7 +5,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 
-define("DB_HOST", "localhost");
+define("DB_HOST", "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com");
 define("DB_USER", "nbuser");
 define("DB_PASS", "12345678");
 define("DB_NAME", "dbmusic");
