@@ -19,7 +19,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         ?>
         
          <?php
-        $con1 = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+        $con1 = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
         $sql1 = "SELECT * FROM register WHERE memberID = '$memberID'";
         $result1 = $con1->query($sql1);
         if ($record1 = $result1->fetch_object()) {
@@ -34,7 +34,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                     <?php
                     global $hideForm;
                     $hideForm = false;
-                    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
                     $sql = "SELECT DISTINCT e.eventID FROM bookingrecord bk,payment p ,event e  WHERE bk.paymentID = p.paymentID AND bk.eventID = e.eventID AND memberID = '$memberID'";
                     $result = $con->query($sql);
                     if ($result->num_rows > 0) {
@@ -87,7 +87,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                             //NO ERROR, INSERT RECORD
                             $feedbackID = "F" . getFeedbackID();
 
-                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
                             $sql = "INSERT INTO feedback VALUES(?, ?, ?, ?, ?, ?)";
 
                             $statement = $con->prepare($sql);

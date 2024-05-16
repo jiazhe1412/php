@@ -24,7 +24,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             isset($_GET["eventid"]) ?
                             $event = strtoupper(trim($_GET["eventid"])) :
                             $event = "";
-            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
             $sql = "SELECT * FROM event WHERE eventID = '$event'";
             $result = $con->query($sql);
 

@@ -20,7 +20,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             global $hideForm;
             if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 isset($_GET["feedbackid"]) ? $feedbackid = strtoupper(trim($_GET["feedbackid"])) : $feedbackid = "";
-                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
                 $sql = "SELECT * FROM feedback WHERE feedbackID = '$feedbackid'";
                 $result = $con->query($sql);
 
@@ -53,7 +53,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
                 if (empty($error)) {
                     //No error
-                    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                     $sql = "UPDATE feedback SET eventID = ?, name = ?, email = ?, feedback = ? WHERE feedbackID = ?";
 
@@ -97,7 +97,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                         <tr>
                             <th>Event ID: </th>
                             <td><?php
-                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
                                 $sql = "SELECT * FROM event";
                                 $result = $con->query($sql);
                                 echo "<select name='slcfeedback' class='slcEvent'>";

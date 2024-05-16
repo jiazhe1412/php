@@ -27,7 +27,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
                                 (isset($_GET["eventid"])) ? $eventID = strtoupper(trim($_GET["eventid"])) : $eventID = '';
 
-                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                                 $sql = "SELECT * FROM event WHERE eventID = '$eventID'";
                                 $result = $con->query($sql);
@@ -71,7 +71,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                                 $ticketNum = $_POST['ticketNum'];
                                 $venue = trim($_POST['venue']);
 
-                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                                 $sql = "DELETE FROM event WHERE eventID = ?";
 

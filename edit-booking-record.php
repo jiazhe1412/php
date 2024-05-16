@@ -30,7 +30,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
                                 (isset($_GET["ticketid"])) ? $ticketID = strtoupper(trim($_GET["ticketid"])) : $ticketID = '';
 
-                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                                 $sql = "SELECT * FROM bookingrecord WHERE ticketID = '$ticketID'";
                                 $result = $con->query($sql);
@@ -54,7 +54,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                             } else if(isset($_POST['cancel'])){
                                 (isset($_GET["ticketid"])) ? $ticketID = strtoupper(trim($_GET["ticketid"])) : $ticketID = '';
 
-                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                                 $sql = "SELECT * FROM bookingrecord WHERE ticketID = '$ticketID'";
                                 $result = $con->query($sql);
@@ -96,7 +96,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                                     //update record,no error
                                     $totalPrice = calculatePrice($eventID, $ticketQty);
                                     $checkprice = checkTotalPrice($price, $eventID, $ticketQty);
-                                    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                                    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                                     $sql = "UPDATE bookingrecord SET paymentID = ?,eventID = ?,ticketQty = ?, totalPrice = ?, bookingDate = ? WHERE ticketID = ?";
 

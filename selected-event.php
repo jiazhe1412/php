@@ -102,7 +102,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 }
 
 
-                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                 if ($startDate == "%") {
                     $sql = "SELECT * FROM event WHERE eventName LIKE '$eventName'";

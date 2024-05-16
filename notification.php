@@ -30,7 +30,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
  
                 <?php
                 global $_SESSION;
-                $con=new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
+                $con=new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME, DB_PORT);
                 
                 if (!empty($_POST)) {
                     $notice = trim($_POST["notice"]);

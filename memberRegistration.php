@@ -51,7 +51,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                         //move the file and save in the image folder
                         move_uploaded_file($photo['tmp_name'], 'image/' . $newFileName);
 
-                        $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                        $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
                         if ($con->connect_errno) {
                             echo '<div>Failed to connect to MySQL: ' . $con->connect_error . '</div>';
                             exit();

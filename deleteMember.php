@@ -19,7 +19,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         <?php
         if (isset($_SESSION['email'])) {
             $email = $_SESSION['email'];
-            $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+            $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
             $sql = "SELECT * FROM register WHERE memberGmail = ?";
             $stmt = $con->prepare($sql);
             $stmt->bind_param('s', $email);
@@ -59,7 +59,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 // delete record 
 
                 $email = $_SESSION['email'];
-                $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
                 $sql = "DELETE FROM register WHERE memberGmail = ?";
                 $stmt = $con->prepare($sql);
                 $stmt->bind_param('s', $email);

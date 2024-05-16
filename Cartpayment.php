@@ -1,7 +1,7 @@
 <?php
 
 function checkPaymentID() {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     $sql = "SELECT * FROM payment";
 
@@ -70,7 +70,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
                         if (empty($error)) {
 //booking record------------------------------------------------------------------------------------------------------------
-                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                             $sql = "SELECT * FROM bookinglist WHERE memberID='$memberID'";
 
@@ -89,7 +89,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                             $result->free();
                             $stmt->close();
                             //save in database
-                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                             $sql = "INSERT INTO payment VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                             $date = date("Y-m-d");
@@ -101,7 +101,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
                             if ($statement->execute()) {
                                 //updated sucessful
-                                $con1 = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                                $con1 = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
                                 $sql1 = "DELETE FROM bookinglist WHERE memberID = ?";
                                 $statement1 = $con->prepare($sql1);
                                 $statement1->bind_param("s", $memberID);
@@ -152,7 +152,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                         if (empty($error)) {
 //booking record------------------------------------------------------------------------------------------------------------
                             //save in database
-                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                             $sql = "SELECT * FROM bookinglist WHERE memberID='$memberID'";
 
@@ -182,7 +182,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
                             if ($statement->execute()) {
                                 //updated sucessful
-                                $con1 = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                                $con1 = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
                                 $sql1 = "DELETE FROM bookinglist WHERE memberID = ?";
                                 $statement1 = $con->prepare($sql1);
                                 $statement1->bind_param("s", $memberID);

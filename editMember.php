@@ -22,7 +22,7 @@ $email_from_session = $_SESSION['email'];
             <h1 class="title">Edit Member Data</h1>
             <?php
             if (!empty($email_from_session)) {
-                $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
 
                 if ($con->connect_errno) {
                     printf("Connect failed: %s\n", $con->connect_error);
@@ -104,7 +104,7 @@ $email_from_session = $_SESSION['email'];
                         $path = "image/$oldPhoto";
                         unlink($path);
                     }
-                    $con1 = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                    $con1 = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
                     $stmt1 = $con1->prepare("UPDATE register SET memberName = ?, memberAge = ?, memberTel = ?,profilePhoto = ? WHERE memberGmail = ?");
                     $stmt1->bind_param("sssss", $name, $age, $tel, $newFileName, $email);
                     if ($stmt1->execute()) {

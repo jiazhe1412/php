@@ -34,7 +34,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                                     <option>-</option>
 
                                     <?php
-                                    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                                    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                                     $sql = "SELECT * FROM event";
 
@@ -129,7 +129,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                                         //retrieve the id from the url
                                         (isset($_GET["eventid"])) ? $eventID = strtoupper(trim($_GET["eventid"])) : $eventID = '';
 
-                                        $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                                        $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                                         $sql = "SELECT * FROM event WHERE eventID = '$eventID'";
 

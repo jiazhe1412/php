@@ -10,8 +10,10 @@ define('DB_HOST', "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com");
 define('DB_USER', "nbuser");
 define('DB_PASSWORD', "12345678");
 define('DB_NAME', "dbmusic");
+define('DB_PORT', '3306');
+
 function checkMemberID() {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
 
     $sql = "SELECT * from register";
 
@@ -39,7 +41,7 @@ function checkMemberID() {
     }
 }
 function checkNoticeID() {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
 
     $sql = "SELECT * from notice";
 
@@ -124,7 +126,7 @@ function checkGmail($email) {
 }
 
 function deleteMember($member) {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
     $sql = "DELETE register FROM memberID = ?";
     $stmt = $con->prepare($sql);
     $stmt->bind_param('s', $id);
@@ -139,7 +141,7 @@ if($stmt->execute()) {
 
 function memberGmailExist($email) {
      $exist = false;
-        $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
         $sql = "SELECT * FROM register WHERE memberGmail = '$email'";
         if ($result = $con->query($sql)) {
             if ($result->num_rows > 0) {
@@ -151,7 +153,7 @@ function memberGmailExist($email) {
         return $exist;
 }
 function getNotice() {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
 
     $sql = "SELECT * FROM notice";
     $result = mysqli_query($con, $sql);

@@ -20,7 +20,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             isset($_GET["bookingID"]) ? $bookingID = strtoupper(trim($_GET["bookingID"])) : $bookingID = "";
-            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
             $sql = "SELECT * FROM bookinglist WHERE bookingID = '$bookingID'";
             $result = $con->query($sql);
 
@@ -80,7 +80,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             //POST
             $bookid = $_POST['hdBookingID'];
             
-            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
             
             $sql = "DELETE FROM bookinglist WHERE bookingID = ?"; 
             

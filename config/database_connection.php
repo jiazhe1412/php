@@ -5,13 +5,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 
-define("DB_HOST", "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com");
+define("DB_HOST", "localhost");
 define("DB_USER", "nbuser");
 define("DB_PASS", "12345678");
 define("DB_NAME", "dbmusic");
+define('DB_PORT', '3306');
+
 
 function checkEventID() {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     $sql = "SELECT * from event";
 
@@ -148,7 +150,7 @@ function checkPhoto($photo) {
 }
 
 function eventIDvalidation($eventID) {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     $sql = "SELECT * FROM event WHERE eventID='$eventID'";
 
@@ -172,7 +174,7 @@ function checkQty($ticketQty) {
 }
 
 function checkTotalPrice($price, $eventID, $ticketQty) {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     $sql = "SELECT * FROM event WHERE eventID='$eventID'";
 
@@ -199,7 +201,7 @@ function checkTotalPrice($price, $eventID, $ticketQty) {
 }
 
 function calculatePrice($eventID, $ticketQty) {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     $sql = "SELECT price FROM event WHERE eventID='$eventID'";
 
@@ -217,7 +219,7 @@ function calculatePrice($eventID, $ticketQty) {
 }
 
 function findEventID($allname) {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     $sql = "SELECT * from event";
 
@@ -233,7 +235,7 @@ function findEventID($allname) {
 }
 
 function deleteQty($eventID, $ticketQty) {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     $sql = "UPDATE event SET ticketNumber = ticketNumber - $ticketQty WHERE eventID = '$eventID'";
 
@@ -243,7 +245,7 @@ function deleteQty($eventID, $ticketQty) {
 }
 
 function addBackQty($eventID, $ticketQty) {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     $sql = "UPDATE event SET ticketNumber = ticketNumber + $ticketQty WHERE eventID = '$eventID'";
 
@@ -255,7 +257,7 @@ function addBackQty($eventID, $ticketQty) {
 
 
 function getEventName($eventID) {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     $sql = "SELECT * FROM event WHERE eventID = '$eventID'";
 

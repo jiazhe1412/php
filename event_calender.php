@@ -88,7 +88,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
             //to display the event on the calender
             //step 1:make connection
-            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
             $sql = "SELECT * FROM event";
             $i = 0;
             if ($result = $con->query($sql)) {

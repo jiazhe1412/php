@@ -51,7 +51,7 @@
 
                             $email = trim($_POST['email']);
                             $password = trim($_POST['password']);
-                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
                             $sql = "SELECT * FROM register";
                             if ($result = $con->query($sql)) {
                                 if ($email == "staff@gmail.com") {

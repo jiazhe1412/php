@@ -22,7 +22,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 <?php
                 if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     isset($_GET["id"]) ? $eventID = strtoupper(trim($_GET["id"])) : $eventID = "";
-                    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
                     $sql = "SELECT * FROM feedback WHERE eventID = '$eventID'";
                     if ($result = $con->query($sql)) {
                         while ($record = $result->fetch_object()) {

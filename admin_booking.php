@@ -96,7 +96,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                                 $eventID = "%";
                             }
 
-                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                             $sql = "SELECT * FROM bookingrecord WHERE ticketID LIKE '$ticketID' AND paymentID LIKE '$paymentID' AND eventID LIKE '$eventID' ORDER BY $type $sort";
 
@@ -134,7 +134,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                             }
                         }
                     } else {
-                        $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+                        $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
                         $sql = "SELECT * FROM bookingrecord ORDER BY $type $sort";
 

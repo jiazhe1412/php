@@ -1,7 +1,7 @@
 <?php
 
 function checkBookingID() {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     $sql = "SELECT * FROM bookinglist";
 
@@ -51,7 +51,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                             $id = $_GET['eventid'] :
                             $id = "";
 
-            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
             $sql = "SELECT * FROM event WHERE eventID = '$id'";
             $result = $con->query($sql);
 
@@ -178,7 +178,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
         if (isset($_POST['addCart'])) {
 
-            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);    //
+            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);    //
                     
             $eventID = $_SESSION['eventID'];
             $ticketQty = $_SESSION['eventQty'];
