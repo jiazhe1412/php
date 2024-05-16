@@ -21,7 +21,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 isset($_GET['feedbackid']) ? $feedbackid = strtoupper(trim($_GET['feedbackid'])) : $feedbackid = "";
-                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+                $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
                 $sql = "SELECT * FROM feedback WHERE feedbackID = '$feedbackid'";
                 $result = $con->query($sql);
 
@@ -77,7 +77,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 $fbid = $_POST['hdFeedbackID'];
                 $fbname = $_POST['hdFeedbackName'];
 
-                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+                $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
                 $sql = "DELETE FROM feedback WHERE feedbackID = ?";
 

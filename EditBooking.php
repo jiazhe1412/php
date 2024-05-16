@@ -19,7 +19,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         global $hideForm;
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             isset($_GET["bookingID"]) ? $bookingID = strtoupper(trim($_GET["bookingID"])) : $bookingID = "";
-            $con1 = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+            $con1 = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
             $sql1 = "SELECT * FROM bookinglist WHERE bookingID = '$bookingID'";
             $result1 = $con1->query($sql1);
 
@@ -40,7 +40,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             $con1->close();
 
             isset($_GET["eventID"]) ? $eventID = strtoupper(trim($_GET["eventID"])) : $eventID = "";
-            $con2 = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+            $con2 = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
             $sql2 = "SELECT * FROM event WHERE eventID = '$eventID'";
             $result2 = $con2->query($sql2);
 
@@ -76,7 +76,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
             if (empty($error)) {
                 //No error
-                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+                $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
                 $sql = "UPDATE Bookinglist SET eventID = ?, ticketNumberPurchase = ?, eventPurchaseDate = ?, countPrice = ? WHERE bookingID = ?";
 

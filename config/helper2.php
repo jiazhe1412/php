@@ -5,11 +5,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 
-define('DB_HOST', 'dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com');
-define('DB_USER', 'nbuser');
-define('DB_PASS', '12345678');
-define('DB_NAME', 'music');
-define('DB_PORT', '3306');
+$DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+$DB_USER = "nbuser";
+$DB_PASS = "12345678";
+$DB_NAME = "music";
+$DB_PORT = "3306";
 
 function getAllDate($startDay, $endDay) {
     $datebegin = new DateTime("$startDay");
@@ -79,7 +79,7 @@ function checkFeedback($feedback) {
 }
 
 function getFeedbackID() {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+    $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT * FROM feedback";
 
@@ -102,7 +102,7 @@ function getFeedbackID() {
 }
 
 function getAllEvent() {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+    $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT eventID, eventName FROM event";
 
@@ -117,7 +117,7 @@ function getAllEvent() {
 }
 
 function getEventName($eventID) {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+    $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT * FROM event WHERE eventID = '$eventID'";
 
@@ -132,7 +132,7 @@ function getEventName($eventID) {
 }
 
 function deleteQty($eventID, $ticketQty) {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+    $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "UPDATE event SET ticketNumber = ticketNumber - $ticketQty WHERE eventID = '$eventID'";
 
@@ -142,7 +142,7 @@ function deleteQty($eventID, $ticketQty) {
 }
 
 function addBackQty($eventID, $ticketQty) {
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+    $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "UPDATE event SET ticketNumber = ticketNumber + $ticketQty WHERE eventID = '$eventID'";
 
