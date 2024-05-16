@@ -27,7 +27,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
                                 (isset($_GET["ticketid"])) ? $ticketID = strtoupper(trim($_GET["ticketid"])) : $ticketID = '';
 
-                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+                                $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
                                 $sql = "SELECT * FROM bookingrecord WHERE ticketID = '$ticketID'";
                                 $result = $con->query($sql);
@@ -57,7 +57,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                                 $date = $_POST['date'];
                                 addBackQty($eventID, $ticketQty);
 
-                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+                                $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
                                 
                                 $sql = "DELETE FROM bookingrecord WHERE ticketID = ?";
 

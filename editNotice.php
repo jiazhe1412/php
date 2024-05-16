@@ -17,7 +17,7 @@ require_once './config/helperFile.php';
             <h1 class="h1txt">Edit Notice</h1>
             <?php
             if (!empty($noticeID)) {
-                $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
+                $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
                 if ($con->connect_errno) {
                     printf("Connect failed: %s\n", $con->connect_error);

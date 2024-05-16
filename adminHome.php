@@ -15,7 +15,7 @@ session_start();
         include './admin_header.php';
         require_once './config/helperFile.php';
         if (isset($_POST["btnDelete"]) && isset($_POST["checked"])) {
-            $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
+            $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
             foreach ($_POST["checked"] as $memberID) {
                 $sql = "DELETE FROM register WHERE memberID='$memberID'";
                 mysqli_query($con, $sql);
@@ -26,7 +26,7 @@ session_start();
         if (isset($_POST["noticeDlt"])) {
             $id = $_POST['noticeDlt'];
 
-            $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
+            $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
             $sql = "DELETE FROM notice WHERE noticeID = ?";
             $stmt = $con->prepare($sql);
             $stmt->bind_param('s', $id);
@@ -37,7 +37,7 @@ session_start();
         ?>
 
         <?php
-        $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
+        $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
         $sql = "SELECT COUNT(*) FROM register";
         $result = mysqli_query($con, $sql);
         if ($result) {
@@ -65,7 +65,7 @@ session_start();
         if (isset($_POST["submit"])) {
             $id = trim($_POST["txtID"]);
 
-            $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
+            $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
             $sql = "SELECT * FROM register where memberID='$id'";
             $result = mysqli_query($con, $sql);
             $row = mysqli_fetch_assoc($result);
@@ -116,7 +116,7 @@ session_start();
         <?php //---------------------notice------------------------------------------------------- ?>
 
         <?php
-        $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
+        $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
         $id = 'N' . checkNoticeID($id);
 
@@ -129,7 +129,7 @@ session_start();
             $con->close();
         }
 
-        $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
+        $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
         $sql = "SELECT * FROM notice";
         $result = mysqli_query($con, $sql);
 

@@ -79,6 +79,11 @@ function checkFeedback($feedback) {
 }
 
 function getFeedbackID() {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT * FROM feedback";
@@ -102,6 +107,11 @@ function getFeedbackID() {
 }
 
 function getAllEvent() {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT eventID, eventName FROM event";
@@ -117,6 +127,11 @@ function getAllEvent() {
 }
 
 function getEventName($eventID) {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT * FROM event WHERE eventID = '$eventID'";
@@ -132,6 +147,11 @@ function getEventName($eventID) {
 }
 
 function deleteQty($eventID, $ticketQty) {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "UPDATE event SET ticketNumber = ticketNumber - $ticketQty WHERE eventID = '$eventID'";
@@ -142,6 +162,11 @@ function deleteQty($eventID, $ticketQty) {
 }
 
 function addBackQty($eventID, $ticketQty) {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "UPDATE event SET ticketNumber = ticketNumber + $ticketQty WHERE eventID = '$eventID'";
@@ -149,5 +174,4 @@ function addBackQty($eventID, $ticketQty) {
     $result = $con->query($sql);
 
     $con->close();
-    
 }

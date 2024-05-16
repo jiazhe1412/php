@@ -27,7 +27,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
                                 (isset($_GET["eventid"])) ? $eventID = strtoupper(trim($_GET["eventid"])) : $eventID = '';
 
-                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+                                $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
                                 $sql = "SELECT * FROM event WHERE eventID = '$eventID'";//
                                 $result = $con->query($sql);//
@@ -140,7 +140,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                                     $startTime = strtotime($startTime);
                                     $endTime = strtotime($endTime);
 
-                                    $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+                                    $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
                                     $sql = "UPDATE event SET eventName = ?,eventPhoto = ?,startDay = ?,endDay = ?, startTime = ?, endTime = ?,description = ?,price = ?, ticketNumber = ?,venue = ? WHERE eventID = ?";
 

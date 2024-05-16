@@ -15,7 +15,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         require_once './config/helper2.php';
         ?>
         <div class='top'><h2>Delete Feedback</h2></div>
-        
+
         <div class="deleteFeedback">
             <h1 style='text-align:center;font-family:cursive;'>Delete Feedback</h1>
             <?php

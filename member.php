@@ -34,7 +34,7 @@ if (isset($_GET['logout'])) {
             </div>
         </div>
         <?php
-        $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
+        $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
         $sql = "SELECT * FROM register WHERE memberID='$memberID'";
         $result = $con->query($sql);
@@ -53,7 +53,7 @@ if (isset($_GET['logout'])) {
 <?php
 if (isset($_SESSION['email'])) {
 
-    $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
+    $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $stmt = "SELECT memberName,memberAge,memberID,memberTel,profilePhoto FROM register WHERE memberGmail='$email'";
     $result = mysqli_query($con, $stmt);

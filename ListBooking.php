@@ -37,7 +37,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
                 <?php
                 (isset($_SESSION['memberID'])) ? $memberID = $_SESSION['memberID'] : $memberID = "";
-                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+                $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
                 $sql = "SELECT * FROM bookinglist WHERE memberID='$memberID'";
 
                 if ($result = $con->query($sql)) {
@@ -68,7 +68,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
 
 
-                        $con1 = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+                        $con1 = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
                         $sql1 = "SELECT SUM(countPrice) FROM bookinglist WHERE memberID='$memberID'";
 
                         if ($result1 = $con1->query($sql1)) {

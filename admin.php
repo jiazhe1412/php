@@ -18,7 +18,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
      session_start();
 $id = isset($_SESSION['staffID']) ? $_SESSION['staffID'] : '';
 
-        $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
+        $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
         if (!$con) {
             die('Could not connect: ' . mysqli_error());

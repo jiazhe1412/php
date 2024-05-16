@@ -48,7 +48,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                         </tr>
                     ", $result->num_rows);
 
-                        
                         $result->free();
                         $con->close();
                     }

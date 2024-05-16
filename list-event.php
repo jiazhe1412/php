@@ -100,7 +100,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                         $error = array_filter($error);
 
                         if (empty($error)) {
-                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+                            $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
                             $sql = "SELECT * FROM event WHERE eventID LIKE '$eventID' AND eventName LIKE '$eventName' AND startDay >= '$startDate' AND endDay <= '$endDate' ORDER BY $type $sort";
 
@@ -144,7 +144,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                     } else {
 
 
-                        $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+                        $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
                         $sql = "SELECT * FROM event ORDER BY $type $sort";
 

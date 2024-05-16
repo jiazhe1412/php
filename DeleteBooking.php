@@ -67,11 +67,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                         <input type='button' value='Cancel' name='btnBookingCancel' onclick='location = \"ListBooking.php\"'/>
                         </form>
                         </div>", $bookingid, $memberid, $eventid, $ticketPurchase, $unitPrice, $eventPurchase, $bookingid);
-            
+
                 $result->free();
                 $con->close();
-                
-                
             } else {
                 //record not found
                 echo "<div class='error'>Unable to retrieve record![<a href='ListBooking.php'>Back to Booking list</a>]</div>";
@@ -79,21 +77,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         } else {
             //POST
             $bookid = $_POST['hdBookingID'];
-            
+
             $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
-            
-            $sql = "DELETE FROM bookinglist WHERE bookingID = ?"; 
-            
+
+            $sql = "DELETE FROM bookinglist WHERE bookingID = ?";
+
             $stmt = $con->prepare($sql);
-            
+
             $stmt->bind_param('s', $bookid);
-            
-            if($stmt->execute()){
+
+            if ($stmt->execute()) {
                 //deleted
-                 printf("<div class='sucess'>%s has been deleted.
+                printf("<div class='sucess'>%s has been deleted.
                             [<a href='ListBooking.php'>Back to Booking List</a>]
                              </div>", $bookid);
-            }else{
+            } else {
                 //unable to delete
                 echo "<div class='error'>Unable to Delete Booking!</div>
                     [<a href='ListBooking.php'>Back to Bookiing List</a>]";
@@ -105,8 +103,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
 
 
-        <?php
-        include './footer.php';
-        ?>
+<?php
+include './footer.php';
+?>
     </body>
 </html>

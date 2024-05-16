@@ -57,7 +57,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
                             $error['enddate'] = checkEndDate($endDate, $startDate);
 
-                            $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+                            $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
                             $sql = "SELECT * from event";
                             $checking = 0;
@@ -110,7 +110,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
                                 //insert into database
                                 //step 1:make connection to database
-                                $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+                                $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
                                 $sql = "INSERT INTO event (eventID,eventName,eventPhoto,startDay,endDay,startTime,endTime,description,price,ticketNumber,venue) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
 

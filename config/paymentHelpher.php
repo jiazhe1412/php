@@ -28,38 +28,43 @@ function checkCardName($cardName) {
 }
 
 function checkCardCvv($cardCVV) {
-     if ($cardCVV == NULL) {
-         return "Please Enter <b>Card Cvv</b>";
-     }else if(!preg_match('/^[0-9]{3}$/', $cardCVV)){
-         return "Invalid <b>card cvv</b>. Must be <b>3 digits</b> and contain <b>only numbers</b>.";
-     }
+    if ($cardCVV == NULL) {
+        return "Please Enter <b>Card Cvv</b>";
+    } else if (!preg_match('/^[0-9]{3}$/', $cardCVV)) {
+        return "Invalid <b>card cvv</b>. Must be <b>3 digits</b> and contain <b>only numbers</b>.";
+    }
 }
 
-function checkCardEpyDate($cardEpyDate){
+function checkCardEpyDate($cardEpyDate) {
     if ($cardEpyDate == NULL) {
         return "Please Enter <b>Card Expiry Date</b>";
-    }else if(!preg_match('/^(0[1-9]|1[0-2])\/[0-9]{2}$/', $cardEpyDate)){ 
+    } else if (!preg_match('/^(0[1-9]|1[0-2])\/[0-9]{2}$/', $cardEpyDate)) {
         return "Incorret <b>Expiry Date</b>, the correct format is <b>MM/YY</b>";
     }
 }
 
-function checktngPhone($tngPhone){
+function checktngPhone($tngPhone) {
     if ($tngPhone == NULL) {
         return "Please Enter <b>Card Expiry Date</b>";
-    }else if(!preg_match('/^(01)[0-9]{8,9}$/', $tngPhone)){
+    } else if (!preg_match('/^(01)[0-9]{8,9}$/', $tngPhone)) {
         return "Phone Number must <b>only number</b> and <b>contain 10 or 11 characters</b>. The Format is <b>01234567890 Without Dash</b>.";
     }
-} 
+}
 
-function checktngPin($tngPin){
+function checktngPin($tngPin) {
     if ($tngPin == NULL) {
         return "Please Enter <b>Card Expiry Date</b>";
-    }else if(!preg_match('/^[0-9]{6}$/', $tngPin)){
+    } else if (!preg_match('/^[0-9]{6}$/', $tngPin)) {
         return "PIN Number must contain <b>only number</b> and must <b> 6 characters</b>.";
     }
 }
 
 function getTicketID() {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT * from bookingrecord";
@@ -85,6 +90,11 @@ function getTicketID() {
 }
 
 function deleteQty($eventID, $ticketQty) {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "UPDATE event SET ticketNumber = ticketNumber - $ticketQty WHERE eventID = '$eventID'";
@@ -95,6 +105,11 @@ function deleteQty($eventID, $ticketQty) {
 }
 
 function addBackQty($eventID, $ticketQty) {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "UPDATE event SET ticketNumber = ticketNumber + $ticketQty WHERE eventID = '$eventID'";
@@ -102,6 +117,4 @@ function addBackQty($eventID, $ticketQty) {
     $result = $con->query($sql);
 
     $con->close();
-    
 }
-

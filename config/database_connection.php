@@ -13,6 +13,11 @@ $DB_PORT = "3306";
 
 
 function checkEventID() {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT * from event";
@@ -150,6 +155,11 @@ function checkPhoto($photo) {
 }
 
 function eventIDvalidation($eventID) {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT * FROM event WHERE eventID='$eventID'";
@@ -174,6 +184,11 @@ function checkQty($ticketQty) {
 }
 
 function checkTotalPrice($price, $eventID, $ticketQty) {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT * FROM event WHERE eventID='$eventID'";
@@ -201,6 +216,11 @@ function checkTotalPrice($price, $eventID, $ticketQty) {
 }
 
 function calculatePrice($eventID, $ticketQty) {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT price FROM event WHERE eventID='$eventID'";
@@ -219,6 +239,11 @@ function calculatePrice($eventID, $ticketQty) {
 }
 
 function findEventID($allname) {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT * from event";
@@ -235,6 +260,11 @@ function findEventID($allname) {
 }
 
 function deleteQty($eventID, $ticketQty) {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "UPDATE event SET ticketNumber = ticketNumber - $ticketQty WHERE eventID = '$eventID'";
@@ -245,6 +275,11 @@ function deleteQty($eventID, $ticketQty) {
 }
 
 function addBackQty($eventID, $ticketQty) {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "UPDATE event SET ticketNumber = ticketNumber + $ticketQty WHERE eventID = '$eventID'";
@@ -257,6 +292,11 @@ function addBackQty($eventID, $ticketQty) {
 
 
 function getEventName($eventID) {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT * FROM event WHERE eventID = '$eventID'";

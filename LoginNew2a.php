@@ -35,7 +35,7 @@
             <div class="whole" style="position: absolute; top: 70%; right:30%;">
 
 
-                <span class='icon-close'><ion-icon name="close" onclick="location='user_event.php'"></ion-icon></span>
+                <span class='icon-close'><ion-icon name="close" onclick="location = 'user_event.php'"></ion-icon></span>
                 <div class="form-box login">
                     <p style="font-size:120%;background-color: pink;text-align: center;">
                         <?php
