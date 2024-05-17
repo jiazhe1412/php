@@ -179,7 +179,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         if (isset($_POST['addCart'])) {
 
             $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);  //
-                    
+
             $eventID = $_SESSION['eventID'];
             $ticketQty = $_SESSION['eventQty'];
             $dateTicket = $_SESSION['eventDate'];
@@ -187,8 +187,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             $priceEvent = $_SESSION['price'];
             //insert the data to filter the record based on member id
             $memberID = $_SESSION['memberID'];
-            
-            
+
+           
+
             if ($result == $record->fetch_object()) {
                 $count = 0;
                 while ($record = $result->fetch_object()) { //
@@ -207,7 +208,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                     }
                 }
                 $result->free();
-                $record->close();//
+                $record->close(); //
             }
             if ($count == 0) {
 
