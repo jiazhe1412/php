@@ -1,6 +1,11 @@
 <?php
 
 function checkPaymentID() {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT * FROM payment";

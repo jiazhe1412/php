@@ -78,7 +78,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 //No error
                 $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
-                $sql = "UPDATE Bookinglist SET eventID = ?, ticketNumberPurchase = ?, eventPurchaseDate = ?, countPrice = ? WHERE bookingID = ?";
+                $sql = "UPDATE bookinglist SET eventID = ?, ticketNumberPurchase = ?, eventPurchaseDate = ?, countPrice = ? WHERE bookingID = ?";
 
                 $statement = $con->prepare($sql);
 

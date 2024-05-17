@@ -1,6 +1,11 @@
 <?php
 
 function checkBookingID() {
+    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_USER = "nbuser";
+    $DB_PASS = "12345678";
+    $DB_NAME = "music";
+    $DB_PORT = "3306";
     $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
     $sql = "SELECT * FROM bookinglist";
@@ -188,14 +193,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             //insert the data to filter the record based on member id
             $memberID = $_SESSION['memberID'];
 
-            $sql = "SELECT * FROM event WHERE eventID = '$eventID'";
-            $result = $con->query($sql);
-
+            $sql = "SELECT * FROM bookinglist WHERE eventID = '$eventID'";
+            $record = $con->query($sql);
+            $count = 0;
             if ($result = $record->fetch_object()) {
-
-                $count = 0;
-                while ($record = $result->fetch_object()) { //
-                    if ($record->eventID == $eventID && $memberID == $record->memberID) {
+                while ($result = $record->fetch_object()) { //
+                    if ($result->eventID == $eventID && $memberID == $result->memberID) {
                         $sql = "UPDATE bookinglist SET ticketNumberPurchase = ticketNumberPurchase + $ticketQty,countPrice = ticketNumberPurchase * unitPrice WHERE eventID = '$eventID' AND memberID='$memberID'";
                         $con->query($sql);
                         printf("
