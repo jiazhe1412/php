@@ -1,7 +1,7 @@
 <?php
 
 function checkPaymentID() {
-    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_HOST = "music-rdsdb.c1iugiocociv.us-east-1.rds.amazonaws.com";
     $DB_USER = "nbuser";
     $DB_PASS = "12345678";
     $DB_NAME = "music";

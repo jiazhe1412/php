@@ -7,14 +7,14 @@ global $password;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 global $DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT;
-$DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+$DB_HOST = "music-rdsdb.c1iugiocociv.us-east-1.rds.amazonaws.com";
 $DB_USER = "nbuser";
 $DB_PASS = "12345678";
 $DB_NAME = "music";
 $DB_PORT = "3306";
 
 function checkMemberID() {
-    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_HOST = "music-rdsdb.c1iugiocociv.us-east-1.rds.amazonaws.com";
     $DB_USER = "nbuser";
     $DB_PASS = "12345678";
     $DB_NAME = "music";
@@ -48,7 +48,7 @@ function checkMemberID() {
 }
 
 function checkNoticeID() {
-    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_HOST = "music-rdsdb.c1iugiocociv.us-east-1.rds.amazonaws.com";
     $DB_USER = "nbuser";
     $DB_PASS = "12345678";
     $DB_NAME = "music";
@@ -140,7 +140,7 @@ function checkGmail($email) {
 }
 
 function deleteMember($member) {
-    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_HOST = "music-rdsdb.c1iugiocociv.us-east-1.rds.amazonaws.com";
     $DB_USER = "nbuser";
     $DB_PASS = "12345678";
     $DB_NAME = "music";
@@ -158,7 +158,7 @@ function deleteMember($member) {
 }
 
 function memberGmailExist($email) {
-    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_HOST = "music-rdsdb.c1iugiocociv.us-east-1.rds.amazonaws.com";
     $DB_USER = "nbuser";
     $DB_PASS = "12345678";
     $DB_NAME = "music";
@@ -177,7 +177,7 @@ function memberGmailExist($email) {
 }
 
 function getNotice() {
-    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_HOST = "music-rdsdb.c1iugiocociv.us-east-1.rds.amazonaws.com";
     $DB_USER = "nbuser";
     $DB_PASS = "12345678";
     $DB_NAME = "music";

@@ -5,7 +5,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 
-$DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+$DB_HOST = "music-rdsdb.c1iugiocociv.us-east-1.rds.amazonaws.com";
 $DB_USER = "nbuser";
 $DB_PASS = "12345678";
 $DB_NAME = "music";
@@ -60,7 +60,7 @@ function checktngPin($tngPin) {
 }
 
 function getTicketID() {
-    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_HOST = "music-rdsdb.c1iugiocociv.us-east-1.rds.amazonaws.com";
     $DB_USER = "nbuser";
     $DB_PASS = "12345678";
     $DB_NAME = "music";
@@ -90,7 +90,7 @@ function getTicketID() {
 }
 
 function deleteQty($eventID, $ticketQty) {
-    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_HOST = "music-rdsdb.c1iugiocociv.us-east-1.rds.amazonaws.com";
     $DB_USER = "nbuser";
     $DB_PASS = "12345678";
     $DB_NAME = "music";
@@ -105,7 +105,7 @@ function deleteQty($eventID, $ticketQty) {
 }
 
 function addBackQty($eventID, $ticketQty) {
-    $DB_HOST = "dbmusic.c1iugiocociv.us-east-1.rds.amazonaws.com";
+    $DB_HOST = "music-rdsdb.c1iugiocociv.us-east-1.rds.amazonaws.com";
     $DB_USER = "nbuser";
     $DB_PASS = "12345678";
     $DB_NAME = "music";
