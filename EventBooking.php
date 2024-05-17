@@ -108,8 +108,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
                     <tr>
                    <td colspan='2' class='submit'>
-                  <input type='submit' value='Book the Event' name='btnBook' '/>   
-                  <input type='button' value='Back to Event' onclick='location=\"user_event.php\"'/>
+                  <input type='submit' value='Book the Product' name='btnBook' '/>   
+                  <input type='button' value='Back to Product' onclick='location=\"user_event.php\"'/>
                     </td>
                     </tr>
                     
@@ -118,7 +118,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 echo "</form>
                     </table>";
             } else {
-                echo "<div class='errorEvent'>Unable to Found the Event!<br/>[<a href='user_event.php'>Back to Event</a>]</div>";
+                echo "<div class='errorEvent'>Unable to Found the Product!<br/>[<a href='user_event.php'>Back to Event</a>]</div>";
             }
         }
         ?>
@@ -188,9 +188,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             //insert the data to filter the record based on member id
             $memberID = $_SESSION['memberID'];
 
-           
+            $sql = "SELECT * FROM event WHERE eventID = '$eventID'";
+            $result = $con->query($sql);
 
-            if ($result == $record->fetch_object()) {
+            if ($result = $record->fetch_object()) {
+
                 $count = 0;
                 while ($record = $result->fetch_object()) { //
                     if ($record->eventID == $eventID && $memberID == $record->memberID) {
